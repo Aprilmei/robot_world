@@ -21,6 +21,7 @@ class stack():
         else:
             self.__my_stack.add_head(node)
             self.__first = node
+        return self
         
     def poping(self):
         if(self.__my_stack==None):
@@ -31,10 +32,11 @@ class stack():
                 self.__first = None
             else:
                 self.__first = self.__my_stack.head()
+        return self
 
     def get_stack(self):
         return self.__my_stack
-    
+'''  
 s=stack(6)
 s.pushing(Node(2))
 s.pushing(Node(6))
@@ -47,3 +49,4 @@ print("Print the top",s.get_top())
 print("Print the stack",s.get_stack())
 s.poping()
 print("Print the top",s.get_top())
+'''
