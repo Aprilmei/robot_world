@@ -25,9 +25,13 @@ print("Hello")
 
 def sol_list(data):
     sol_list=list()
+    n=0
     while(len(sol_list)<=50):
         #print("Find a solution",len(sol_list))
-        solution=find_solution(data)
+        s=find_solution(data)
+        solution=hill_climbing(s,data)
+        n+=1
+        print("The solution after hill climbing",solution)
         #print(solution)
         if(fitness_check(solution, data) and solution not in sol_list):
             sol_list.append(solution)
@@ -68,8 +72,6 @@ def find_solution(data):
         #print("the changed one is ",i,j)
         '''   
     #print("The random solution is ",s)
-    solution=hill_climbing(s,data)
-    print("The solution after hill climbing",solution)
     return s
 
 def genetic_alg(first_gen):
