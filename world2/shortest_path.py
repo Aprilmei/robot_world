@@ -39,7 +39,7 @@ def find_path(world,robot,goal,current_path):
         for n in next_step:
             if(current_path.find_element(n)):
                 while(current_path.get_top()!=n):
-                    current_path.poping()
+                    current_path.popping()
         #if the robot could go next, and actually the robot could come from a step in the path before, 
         #we will remove all the steps and go to the step directly   
           
@@ -52,7 +52,7 @@ def find_path(world,robot,goal,current_path):
     else:
         next_step_back=current_path.get_top()
         move_robot(next_step_back)
-        return find_path(world,next_step_back,goal,current_path.poping())
+        return find_path(world,next_step_back,goal,current_path.popping())
     #if there is no feasible step, robot will move back until there is feasible step 
     #all the past step are marked as 2 
                     
@@ -64,6 +64,7 @@ def find_path(world,robot,goal,current_path):
         
                 
 my_world=created_world('world1.dat')
+
 n=len(my_world[0])
 max_stack=n*n
 the_robot=where_is_robot()
@@ -71,8 +72,10 @@ the_goal=get_goal()
 s_current_path=stack(max_stack)
 
 path=find_path(my_world,the_robot,the_goal,s_current_path)
-#print(my_world)
+print(my_world)
 print("The shortest path is ",path[0].get_stack())
+print(my_world)
+print_world()
 
 
 #print(s_current_path.get_stack())

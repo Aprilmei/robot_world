@@ -23,7 +23,7 @@ class stack():
             self.__first = node
         return self
         
-    def poping(self):
+    def popping(self):
         if(self.__my_stack==None):
             print("Error: the stack is empty")
         else:

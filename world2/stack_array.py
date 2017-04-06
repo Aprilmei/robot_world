@@ -35,11 +35,11 @@ class stack():
             self.length+=1
         return self
         
-    def poping(self):
+    def popping(self):
         if(self.length==0):
             print("Error: the stack is empty")
         else:
-            self.__my_stack.remove(self.__first)
+            del self.__my_stack[-1]
             self.length-=1
             if(self.length==0):
                 self.__first = None
@@ -58,7 +58,9 @@ class stack():
         return list(self.__my_stack)
     
 
-
+s=stack(6,[1,2,3,1,2,3])
+s.popping()
+print(s.get_stack())
 
 
 '''   
@@ -76,7 +78,7 @@ print("Find 2",s.find_element(2))
 
 print(s.get_top())
 
-s=stack(6,[1,2,3,4])
+s=stack(6,[1,2,3,1,2,3])
 s.poping()
 print(s.get_stack())
 

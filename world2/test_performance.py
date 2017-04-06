@@ -15,7 +15,7 @@ for n in range (0, 1000, 10):
         s.pushing(i)
     s.find_element(999)
     for i in range(n):
-        s.poping()
+        s.popping()
     
     # Insert operation you want to test here
     end = time.time()

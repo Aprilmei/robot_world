@@ -20,10 +20,10 @@ class Test_stack(unittest.TestCase):
         
     def test_pop(self):
         s=stack(6,[1,2,3,4])
-        s.poping()
-        s.poping()
-        s.poping()
-        s.poping()
+        s.popping()
+        s.popping()
+        s.popping()
+        s.popping()
         self.assertTrue(s.length==0)
         
     def test_find_element(self):

@@ -1,7 +1,6 @@
 # use readlines to read a line a time
 
 import re
-from _ast import arg
 import matplotlib.pyplot as plt
 import numpy as np
 #from world.stack_class import *
@@ -93,6 +92,16 @@ def goal_reached():
         print("Goal is not reached")
         return False    
  
+ 
+def print_world():
+    matrix=np.matrix(the_world)
+    fig = plt.figure(figsize=(6, 3.2))
+    ax = fig.add_subplot(111)
+    ax.set_title('Robot_world')
+    plt.imshow(matrix)
+    ax.set_aspect('equal')
+    plt.colorbar()
+    plt.show()
 
   
 
